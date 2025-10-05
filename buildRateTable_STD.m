@@ -1,4 +1,4 @@
-function rate_table = buildRateTable(spikeMatrix, sampleRate, alignmentWindow, binWidth)
+function rate_table = buildRateTable_STD(spikeMatrix, sampleRate, alignmentWindow, binWidth)
     nTrials = size(spikeMatrix,1);
     nSamples = size(spikeMatrix,2);
 
