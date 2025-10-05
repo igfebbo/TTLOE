@@ -21,7 +21,7 @@ function [ksortPath, continuousPath, acquisitionPath, ttlFolderPath, dataPath, s
     recordingFolder = sprintf('recording%d', recording);
 
     % Define the root directory of your data files
-    rootDir = '/mnt/multiverse/homes/izzy/data';  % Adjust to your data directory
+    rootDir = '/mnt/multiverse/homes/kathi/data';  % Adjust to your data directory
     
     % Construct the kilosort output file path
     ksortPath = fullfile(rootDir, mouseID, dayFolder, fullFile, ...

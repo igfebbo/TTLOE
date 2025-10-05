@@ -50,7 +50,7 @@ figFolder = fullfile(analysis_folder, 'figures');
 if ~exist(figFolder, 'dir')
     mkdir(figFolder);
 end
-savefig(figRaster, fullfile(figFolder, sprintf('Cluster%d_Rasters.fig', ClusterID)));
+%savefig(figRaster, fullfile(figFolder, sprintf('Cluster%d_Rasters.fig', ClusterID)));
         end
     end
 
@@ -71,7 +71,7 @@ savefig(figRaster, fullfile(figFolder, sprintf('Cluster%d_Rasters.fig', ClusterI
             %subplot(nBlocks, nAligns, (b-1)*nAligns + t);
             rateTable = rateTables(clusterIdx).RateTable{b}{t};
             if ~isempty(rateTable)
-                plot(rateTable.Time_sec+offset, rateTable.FR_raw_Hz, 'LineWidth', 1.5); %hold on;
+                plot(rateTable.Time_sec+offset, rateTable.FR_mean_Hz, 'LineWidth', 1.5); %hold on;
                 %plot(rateTable.Time_sec, rateTable.FR_z, '--', 'LineWidth', 1.2);
                 %hold off;
             end
@@ -79,7 +79,7 @@ savefig(figRaster, fullfile(figFolder, sprintf('Cluster%d_Rasters.fig', ClusterI
             xlabel('Time (s)');
             ylabel('Firing Rate (Hz)');
             shadeStimuli(stimuliParams, TTL_struct,blockParams(b).alignmentTTLs{t},blockParams(b).alignmentWindows{t}, maxFR);
-savefig(figPSTH, fullfile(figFolder, sprintf('Cluster%d_PSTHs.fig', ClusterID)));
+%savefig(figPSTH, fullfile(figFolder, sprintf('Cluster%d_PSTHs.fig', ClusterID)));
         end
     end
 end

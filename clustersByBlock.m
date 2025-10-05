@@ -66,7 +66,7 @@ for i = 1:nClusters
             if isempty(spikeMatrix), continue; end
 
 
-            rateTable = buildRateTable(spikeMatrix, sampleRate, alignmentWindow, binWidth);
+            rateTable = buildRateTable_STD(spikeMatrix, sampleRate, alignmentWindow, binWidth);
 
             rateTables(i).ClusterID = clusterID;
             rateTables(i).BlockLabels{b}{t} = blockLabel;
